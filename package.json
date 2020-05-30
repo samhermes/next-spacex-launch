@@ -2,7 +2,7 @@
   "name": "next-spacex-launch",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://samhermes.com/next-spacex-launch",
+  "homepage": "https://samhermes.com/next-spacex-launch",
   "dependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
