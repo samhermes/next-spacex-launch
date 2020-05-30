@@ -42,13 +42,14 @@ class UpcomingLaunches extends Component {
                 if (index === 0) {
                   return false
                 } else {
+                  const watch = mission.links.video_link;
                   return <li key={index}>
                     <div className="launch-datetime">
                       <h3 className="launch-date">
                         {format(mission.launch_date_local, 'MMMM DD, YYYY')}
                       </h3>
                       <p className="launch-time">
-                        {format(mission.launch_date_local, 'h:mm a')} (local time)
+                        {format(mission.launch_date_local, 'h:mm a')} (your time)
                       </p>
                     </div>
                     <div className="launch-details">
@@ -59,6 +60,11 @@ class UpcomingLaunches extends Component {
                         <li><span className="detail-title">Launch Site</span> {mission.launch_site.site_name_long}</li>
                       </ul>
                     </div>
+                    {watch &&
+                      <div className="video-link">
+                        <a href={watch}>Watch</a>
+                      </div>
+                    }
                   </li>;
                 }
               })}

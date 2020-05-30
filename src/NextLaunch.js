@@ -30,6 +30,7 @@ class NextLaunch extends Component {
         <Loading />
       )
     } else {
+      const watch = this.state.nextLaunch.links.video_link;
       return (
         <div className="next-launch">
           <div className="launch-time">
@@ -37,7 +38,7 @@ class NextLaunch extends Component {
               {format(this.state.nextLaunch.launch_date_local, 'MMMM DD, YYYY')}
             </h2>
             <p className="next-launch-time">
-              {format(this.state.nextLaunch.launch_date_local, 'h:mm a')} (local time)
+              {format(this.state.nextLaunch.launch_date_local, 'h:mm a')} (your time)
             </p>
           </div>
           <div className="launch-details">
@@ -48,6 +49,11 @@ class NextLaunch extends Component {
               <li><span className="detail-title">Launch Site</span> {this.state.nextLaunch.launch_site.site_name_long}</li>
             </ul>
           </div>
+          {watch &&
+            <div className="video-link">
+              <a href={watch}>Watch</a>
+            </div>
+          }
         </div>
       )
     }
