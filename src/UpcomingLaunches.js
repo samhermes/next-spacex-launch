@@ -61,7 +61,7 @@ class UpcomingLaunches extends Component {
                       </ul>
                     </div>
                     {watch &&
-                      <div className="video-link">
+                      <div className="launch-video">
                         <a href={watch}>Watch</a>
                       </div>
                     }
