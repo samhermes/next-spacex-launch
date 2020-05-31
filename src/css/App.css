@@ -79,11 +79,11 @@
 }
 
 .page-next-spacex-launch .page .next-launch-date {
-    margin:0
+    margin: 0;
 }
 
 .page-next-spacex-launch .page .next-launch-time {
-    margin:0 0 0.5em
+    margin: 0 0 0.5em;
 }
 
 .page-next-spacex-launch .page .launch-details ul {
@@ -99,7 +99,7 @@
 }
 
 .page-next-spacex-launch .page .launch-details ul li {
-    margin:0
+    margin: 0;
 }
 
 .page-next-spacex-launch .page .launch-details ul .detail-title {
@@ -107,7 +107,7 @@
     font-size: 0.75em;
     letter-spacing: 0.03em;
     color: #9f9f9f;
-    padding-right:0.1em
+    padding-right: 0.1em;
 }
 
 .page-next-spacex-launch .page .launch-video a {
@@ -127,7 +127,7 @@
     padding: 1.5em;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 0.5em;
-    margin-bottom:3em
+    margin-bottom: 3em;
 }
 
 .page-next-spacex-launch .page .upcoming-launches .launches {
@@ -143,7 +143,8 @@
 
 @media screen and (min-width: 62.5em) {
     .page-next-spacex-launch .page .upcoming-launches .launches > li {
-        grid-template-columns:1fr 3fr 0.5fr;
+        grid-template-columns: 1fr 3fr 0.5fr;
+        grid-gap: 1.5rem;
     }
 }
 
