@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import format from 'date-fns/format';
-import Loading from './Loading';
+import React, { Component } from 'react'
+import { parseISO, format } from 'date-fns'
+import Loading from './Loading'
 
 class NextLaunch extends Component {
   constructor() {
@@ -35,10 +35,10 @@ class NextLaunch extends Component {
         <div className="next-launch">
           <div className="launch-time">
             <h2 className="next-launch-date">
-              {format(this.state.nextLaunch.launch_date_local, 'MMMM DD, YYYY')}
+              {format(parseISO(this.state.nextLaunch.launch_date_local), 'MMMM d, yyyy')}
             </h2>
             <p className="next-launch-time">
-              {format(this.state.nextLaunch.launch_date_local, 'h:mm a')} (your time)
+              {format(parseISO(this.state.nextLaunch.launch_date_local), 'h:mm a')} (your time)
             </p>
           </div>
           <div className="launch-details">

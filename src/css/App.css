@@ -74,6 +74,7 @@
 @media screen and (min-width: 62.5em) {
     .page-next-spacex-launch .page .next-launch {
         grid-template-columns: 1fr 3fr 0.5fr;
+        grid-gap: 1.5rem;
     }
 }
 
@@ -142,7 +143,7 @@
 
 @media screen and (min-width: 62.5em) {
     .page-next-spacex-launch .page .upcoming-launches .launches > li {
-        grid-template-columns:1fr 3fr
+        grid-template-columns:1fr 3fr 0.5fr;
     }
 }
 
