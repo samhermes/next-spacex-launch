@@ -54,6 +54,9 @@ class NextLaunch extends Component {
               <li><span className="detail-title">Rocket</span> {this.state.nextLaunch.rocket.rocket_name}</li>
               <li><span className="detail-title">Launch Site</span> {this.state.nextLaunch.launch_site.site_name_long}</li>
             </ul>
+            {this.state.nextLaunch.details &&
+              <p>{this.state.nextLaunch.details}</p>
+            }
           </div>
           <div className="launch-media">
           {badge &&

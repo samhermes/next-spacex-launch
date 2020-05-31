@@ -124,6 +124,11 @@
     padding-right: 0.1em;
 }
 
+.page-next-spacex-launch .page .launch-details p {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0;
+}
+
 .page-next-spacex-launch .page .launch-video a {
     text-decoration: none;
     border: 1px solid rgba(255, 255, 255, 0.5);
