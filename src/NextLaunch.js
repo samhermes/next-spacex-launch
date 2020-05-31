@@ -31,6 +31,7 @@ class NextLaunch extends Component {
       )
     } else {
       const watch = this.state.nextLaunch.links.video_link;
+      const badge = this.state.nextLaunch.links.mission_patch_small;
       return (
         <div className="next-launch">
           <div className="launch-time">
@@ -40,6 +41,11 @@ class NextLaunch extends Component {
             <p className="next-launch-time">
               {format(parseISO(this.state.nextLaunch.launch_date_local), 'h:mm a')} (your time)
             </p>
+            {watch &&
+              <div className="launch-video">
+                <a href={watch}>Watch</a>
+              </div>
+            }
           </div>
           <div className="launch-details">
             <ul className="launch-detail">
@@ -49,11 +55,13 @@ class NextLaunch extends Component {
               <li><span className="detail-title">Launch Site</span> {this.state.nextLaunch.launch_site.site_name_long}</li>
             </ul>
           </div>
-          {watch &&
-            <div className="launch-video">
-              <a href={watch}>Watch</a>
+          <div className="launch-media">
+          {badge &&
+            <div className="launch-badge">
+              <img src={badge} alt="" />
             </div>
           }
+          </div>
         </div>
       )
     }
