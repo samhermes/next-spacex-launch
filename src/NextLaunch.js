@@ -35,6 +35,9 @@ class NextLaunch extends Component {
       return (
         <div className="next-launch">
           <div className="launch-time">
+            <p className="next-launch-day">
+              {format(parseISO(this.state.nextLaunch.launch_date_local), 'EEEE')}
+            </p>
             <h2 className="next-launch-date">
               {format(parseISO(this.state.nextLaunch.launch_date_local), 'MMMM d, yyyy')}
             </h2>
