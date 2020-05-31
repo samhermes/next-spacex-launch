@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a6e61974ecf615f363f398491cd9f5b5",
+    "revision": "be9174cb3622a10f377e68a3793c6389",
     "url": "/next-spacex-launch/index.html"
   },
   {
-    "revision": "a031d1aec06bd84675ba",
-    "url": "/next-spacex-launch/static/css/main.76c28884.chunk.css"
+    "revision": "98b43badf2a563444359",
+    "url": "/next-spacex-launch/static/css/main.d7abb0b5.chunk.css"
   },
   {
     "revision": "8e377432d0c8dd994dbd",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/next-spacex-launch/static/js/2.8f6b5c85.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a031d1aec06bd84675ba",
-    "url": "/next-spacex-launch/static/js/main.beb3de66.chunk.js"
+    "revision": "98b43badf2a563444359",
+    "url": "/next-spacex-launch/static/js/main.55d7f7c5.chunk.js"
   },
   {
     "revision": "79eb5e71d5bcb7e9ba66",

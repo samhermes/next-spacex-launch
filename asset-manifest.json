@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/next-spacex-launch/static/css/main.76c28884.chunk.css",
-    "main.js": "/next-spacex-launch/static/js/main.beb3de66.chunk.js",
-    "main.js.map": "/next-spacex-launch/static/js/main.beb3de66.chunk.js.map",
+    "main.css": "/next-spacex-launch/static/css/main.d7abb0b5.chunk.css",
+    "main.js": "/next-spacex-launch/static/js/main.55d7f7c5.chunk.js",
+    "main.js.map": "/next-spacex-launch/static/js/main.55d7f7c5.chunk.js.map",
     "runtime-main.js": "/next-spacex-launch/static/js/runtime-main.1495435f.js",
     "runtime-main.js.map": "/next-spacex-launch/static/js/runtime-main.1495435f.js.map",
     "static/js/2.8f6b5c85.chunk.js": "/next-spacex-launch/static/js/2.8f6b5c85.chunk.js",
     "static/js/2.8f6b5c85.chunk.js.map": "/next-spacex-launch/static/js/2.8f6b5c85.chunk.js.map",
     "index.html": "/next-spacex-launch/index.html",
-    "precache-manifest.1ce2c76992507a52ee36ec11a328fb13.js": "/next-spacex-launch/precache-manifest.1ce2c76992507a52ee36ec11a328fb13.js",
+    "precache-manifest.e6dbb2d1515608e0b2204643e1a46ff6.js": "/next-spacex-launch/precache-manifest.e6dbb2d1515608e0b2204643e1a46ff6.js",
     "service-worker.js": "/next-spacex-launch/service-worker.js",
-    "static/css/main.76c28884.chunk.css.map": "/next-spacex-launch/static/css/main.76c28884.chunk.css.map",
+    "static/css/main.d7abb0b5.chunk.css.map": "/next-spacex-launch/static/css/main.d7abb0b5.chunk.css.map",
     "static/js/2.8f6b5c85.chunk.js.LICENSE.txt": "/next-spacex-launch/static/js/2.8f6b5c85.chunk.js.LICENSE.txt",
     "static/media/App.css": "/next-spacex-launch/static/media/spacex-bg-small.4b63988c.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.1495435f.js",
     "static/js/2.8f6b5c85.chunk.js",
-    "static/css/main.76c28884.chunk.css",
-    "static/js/main.beb3de66.chunk.js"
+    "static/css/main.d7abb0b5.chunk.css",
+    "static/js/main.55d7f7c5.chunk.js"
   ]
 }
