@@ -8,11 +8,13 @@ class NextLaunch extends Component {
     this.state = {
       isLoaded: false,
       nextLaunch: [],
+      rocket: [],
+      launchpad: [],
     }
   };
 
   componentDidMount() {
-    fetch('https://api.spacexdata.com/v2/launches/next')
+    fetch('https://api.spacexdata.com/latest/launches/next')
       .then(results => {
         return results.json();
       }).then(data => {
@@ -20,6 +22,22 @@ class NextLaunch extends Component {
           isLoaded: true,
           nextLaunch: data
         });
+        fetch(`https://api.spacexdata.com/latest/rockets/${data.rocket}`)
+          .then(results => {
+            return results.json();
+          }).then(data => {
+            this.setState({
+              rocket: data
+            })
+          });
+        fetch(`https://api.spacexdata.com/latest/launchpads/${data.launchpad}`)
+          .then(results => {
+            return results.json();
+          }).then(data => {
+            this.setState({
+              launchpad: data
+            })
+          });
       });
   }
 
@@ -31,18 +49,18 @@ class NextLaunch extends Component {
       )
     } else {
       const watch = this.state.nextLaunch.links.video_link;
-      const badge = this.state.nextLaunch.links.mission_patch_small;
+      const badge = this.state.nextLaunch.links.patch.large;
       return (
         <div className="next-launch">
           <div className="launch-time">
             <p className="next-launch-day">
-              {format(parseISO(this.state.nextLaunch.launch_date_local), 'EEEE')}
+              {format(parseISO(this.state.nextLaunch.date_local), 'EEEE')}
             </p>
             <h2 className="next-launch-date">
-              {format(parseISO(this.state.nextLaunch.launch_date_local), 'MMMM d, yyyy')}
+              {format(parseISO(this.state.nextLaunch.date_local), 'MMMM d, yyyy')}
             </h2>
             <p className="next-launch-time">
-              {format(parseISO(this.state.nextLaunch.launch_date_local), 'h:mm a')} (your time)
+              {format(parseISO(this.state.nextLaunch.date_local), 'h:mm a')} (your time)
             </p>
             {watch &&
               <div className="launch-video">
@@ -52,10 +70,11 @@ class NextLaunch extends Component {
           </div>
           <div className="launch-details">
             <ul className="launch-detail">
-              <li><span className="detail-title">Mission</span> {this.state.nextLaunch.mission_name}</li>
+              <li><span className="detail-title">Mission</span> {this.state.nextLaunch.name}</li>
               <li><span className="detail-title">Flight Number</span> {this.state.nextLaunch.flight_number}</li>
-              <li><span className="detail-title">Rocket</span> {this.state.nextLaunch.rocket.rocket_name}</li>
-              <li><span className="detail-title">Launch Site</span> {this.state.nextLaunch.launch_site.site_name_long}</li>
+              <li><span className="detail-title">Rocket</span> {this.state.rocket.name}</li>
+              <li><span className="detail-title">Launchpad</span> {this.state.launchpad.full_name}</li>
+              <li><span className="detail-title">Location</span> {this.state.launchpad.locality}, {this.state.launchpad.region}</li>
             </ul>
             {this.state.nextLaunch.details &&
               <p>{this.state.nextLaunch.details}</p>

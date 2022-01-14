@@ -1,6 +1,168 @@
-.page-next-spacex-launch .site-header .contain,
-.page-next-spacex-launch .site-footer .contain {
-    max-width: 100%;
+:root {
+	--base-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--color-dark: #010048;
+	--color-medium: #010057;
+	--color-light: #02006c;
+	--color-text: #fff;
+	--color-text-dark: #101010;
+	--color-code-bg: #101010;
+	--dark-border-color: rgba(255, 255, 255, 0.1);
+	--color-extra-light: #f7f7f7;
+	--border-radius: 0.5rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+	font: 300 100% var(--base-font-family);
+	color: var(--color-text-dark);
+	-webkit-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure {
+	margin-bottom: 1rem;
+}
+
+img {
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+ul, ol {
+	margin-left: 1.8em;
+}
+
+li > ul,
+li > ol {
+    margin-bottom: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 300;
+}
+
+strong {
+    font-weight: 500;
+}
+
+a {
+	color: var(--color-text-dark);
+	text-decoration: underline;
+}
+
+a:hover {
+    color: var(--color-text-dark);
+}
+
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.page-title {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+  
+@media screen and (min-width: 37.5em) {
+    .page-title {
+        font-size: 2.3rem;
+        line-height: 1.25;
+    }
+}
+
+.page-content {
+    margin-bottom: 2.5rem;
+}
+  
+.page-content h2 {
+    font-size: 1.4em;
+    font-weight: 500;
+    margin-top: 1.5em;
+}
+
+@media screen and (min-width: 37.5em) {
+    .page-content h2 {
+        font-size: 1.6em;
+    }
+}
+  
+.page-content h3 {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+  
+.page-content h4 {
+    font-size: 1.05em;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 37.5em) {
+    .page-content h4 {
+        font-size: 1.1em;
+    }
+}
+  
+@media screen and (min-width: 62.5em) {
+    .page-content h4 {
+        font-size: 1.25em;
+    }
+}
+  
+.page-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.8rem;
+}
+
+@media screen and (min-width: 37.5em) {
+    .page-content p {
+        font-size: 1.4rem;
+    }
+}
+  
+.page-content ul,
+.page-content ol {
+    margin-bottom: 1.8rem;
+    font-size: 1.1rem;
+}
+
+@media screen and (min-width: 37.5em) {
+    .page-content ul,
+    .page-content ol {
+        font-size: 1.4rem;
+    }
+}
+
+hr {
+    margin: 3rem auto;
+    border: 0;
+    height: 2px;
+    border-radius: 1px;
+    background: currentColor;
+    max-width: 6rem;
 }
 
 .page-next-spacex-launch .page {
@@ -229,5 +391,20 @@
     line-height: 1.2;
     display: inline-block;
     border-radius: 3px;
+}
+
+.site-footer {
+    padding: 1.5rem;
+    background: #333;
+    color: #fff;
+    font-weight: 400;
+}
+
+.site-footer p {
+    margin-bottom: 0;
+}
+
+.site-footer a {
+    color: #fff;
 }
 

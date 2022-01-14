@@ -12,7 +12,7 @@ class UpcomingLaunches extends Component {
   };
 
   componentDidMount() {
-    fetch('https://api.spacexdata.com/v2/launches/upcoming')
+    fetch('https://api.spacexdata.com/latest/launches/upcoming')
       .then(results => {
         return results.json();
       }).then(data => {
@@ -25,39 +25,32 @@ class UpcomingLaunches extends Component {
 
   render() {
     const { isLoaded } = this.state;
-    if (!isLoaded) {
-      return (
-        <div>
-          <h2>Upcoming Launches</h2>
+    return (
+      <div>
+        <h2>Future Launches</h2>
+        {!isLoaded ?
           <Loading />
-        </div>
-      )
-    } else {
-      return (
-        <div>
-          <h2>Future Launches</h2>
+        :
           <div className="upcoming-launches">
             <ul className="launches">
               {this.state.upcomingLaunches.slice(0, 5).map(function (mission, index) {
                 if (index === 0) {
                   return false
                 } else {
-                  const watch = mission.links.video_link;
+                  const watch = mission.links.webcast;
                   return <li key={index}>
                     <div className="launch-datetime">
                       <h3 className="launch-date">
-                        {format(parseISO(mission.launch_date_local), 'MMMM d, yyyy')}
+                        {format(parseISO(mission.date_local), 'MMMM d, yyyy')}
                       </h3>
                       <p className="launch-time">
-                        {format(parseISO(mission.launch_date_local), 'h:mm a')} (your time)
+                        {format(parseISO(mission.date_local), 'h:mm a')} (your time)
                       </p>
                     </div>
                     <div className="launch-details">
                       <ul className="launch-detail">
-                        <li><span className="detail-title">Mission</span> {mission.mission_name}</li>
+                        <li><span className="detail-title">Mission</span> {mission.name}</li>
                         <li><span className="detail-title">Flight Number</span> {mission.flight_number}</li>
-                        <li><span className="detail-title">Rocket</span> {mission.rocket.rocket_name}</li>
-                        <li><span className="detail-title">Launch Site</span> {mission.launch_site.site_name_long}</li>
                       </ul>
                     </div>
                     {watch &&
@@ -70,9 +63,9 @@ class UpcomingLaunches extends Component {
               })}
             </ul>
           </div>
-        </div>
-      )
-    }
+        }
+      </div>
+    )
   }
 }
 
