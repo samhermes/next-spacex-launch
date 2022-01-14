@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/next-spacex-launch/static/css/main.700c1f2c.css",
+    "main.js": "/next-spacex-launch/static/js/main.da35d890.js",
+    "static/media/spacex-bg-large.jpg": "/next-spacex-launch/static/media/spacex-bg-large.a5fe68a5e3155236e887.jpg",
+    "static/media/spacex-bg-small.jpg": "/next-spacex-launch/static/media/spacex-bg-small.5c2e5d66d862e9b4653a.jpg",
+    "index.html": "/next-spacex-launch/index.html",
+    "main.700c1f2c.css.map": "/next-spacex-launch/static/css/main.700c1f2c.css.map",
+    "main.da35d890.js.map": "/next-spacex-launch/static/js/main.da35d890.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.700c1f2c.css",
+    "static/js/main.da35d890.js"
+  ]
+}
